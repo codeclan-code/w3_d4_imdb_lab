@@ -8,7 +8,7 @@ class Casting
     @id = options['id'].to_i if options['id']
     @movies_id = options['movies_id']
     @stars_id = options['stars_id']
-    @fee = options['fee']
+    @fee = options['fee'].to_i
   end
 
   def save()
