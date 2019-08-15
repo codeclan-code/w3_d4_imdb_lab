@@ -13,7 +13,7 @@ class Casting
 
   def save()
     sql = "INSERT INTO casting (movies_id, stars_id, fee)
-      VALUES ($1, $2, $3) RETURNING id"
+    VALUES ($1, $2, $3) RETURNING id"
     values = [@movies_id, @stars_id, @fee]
     casting = SqlRunner.run(sql, values).first
     @id = casting['id'].to_i
